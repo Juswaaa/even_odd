@@ -17,3 +17,18 @@ def extract_even_odd_numbers(input_file, output_even_file, output_odd_file):
 
             print("Even numbers have been written to 'even.txt'")
             print("Odd numbers have been written to 'odd.txt'")
+
+    except FileNotFoundError:
+        print("Error: File not found.")
+    except ValueError:
+        print("Error: The file should contain 20 integers separated by spaces.")
+
+def main():
+    input_file = "C:/Users/gabep/OneDrive/Desktop/Gabe/2nd Sem/OOP/Assignments/No.3/numbers.txt"
+    output_even_file = "even.txt"
+    output_odd_file = "odd.txt"
+
+    extract_even_odd_numbers(input_file, output_even_file, output_odd_file)
+
+if __name__ == "__main__":
+    main()
